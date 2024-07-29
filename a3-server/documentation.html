@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+            font-family: monospace;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .endpoint {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Photo API Documentation</h1>
+
+    <h2>1. Retrieve all photos</h2>
+    <p>Get a list of all photos in the database.</p>
+    <div class="endpoint">
+        <p><strong>Endpoint:</strong> <code>GET /photos</code></p>
+        <p><strong>HTTP Method:</strong> GET</p>
+        <p><strong>Response:</strong></p>
+        <pre>
+            <code>
+                HTTP/1.1 200 OK
+                Content-Type: application/json
+
+                [
+                    {"id": 1, "title": "Photo 1", "description": "Description 1"},
+                    {"id": 2, "title": "Photo 2", "description": "Description 2"},
+                    ...
+                ]
+            </code>
+        </pre>
+    </div>
+
+    <h2>2. Create a new photo</h2>
+    <p>Add data for a new photo item.</p>
+    <div class="endpoint">
+        <p><strong>Endpoint:</strong> <code>POST /photos</code></p>
+        <p><strong>HTTP Method:</strong> POST</p>
+        <p><strong>Request:</strong></p>
+        <pre>
+            <code>
+                Content-Type: application/json
+
+                {
+                    "title": "New Photo",
+                    "description": "New Description"
+                }
+            </code>
+        </pre>
+        <p><strong>Response:</strong></p>
+        <pre>
+            <code>
+                HTTP/1.1 201 Created
+                Content-Type: application/json
+
+                {
+                    "id": 3,
+                    "title": "New Photo",
+                    "description": "New Description"
+                }
+            </code>
+        </pre>
+    </div>
+
+    <h2>3. Retrieve a specific photo</h2>
+    <p>Get data of a specific photo item by ID.</p>
+    <div class="endpoint">
+        <p><strong>Endpoint:</strong> <code>GET /photos/:id</code></p>
+        <p><strong>HTTP Method:</strong> GET</p>
+        <p><strong>Response:</strong></p>
+        <pre>
+            <code>
+                HTTP/1.1 200 OK
+                Content-Type: application/json
+
+                {
+                    "id": 3,
+                    "title": "New Photo",
+                    "description": "New Description"
+                }
+            </code>
+        </pre>
+    </div>
+
+    <h2>4. Update a specific photo</h2>
+    <p>Change data of a specific photo item by ID.</p>
+    <div class="endpoint">
+        <p><strong>Endpoint:</strong> <code>PUT /photos/:id</code></p>
+        <p><strong>HTTP Method:</strong> PUT</p>
+        <p><strong>Request:</strong></p>
+        <pre>
+            <code>
+                Content-Type: application/json
+
+                {
+                    "title": "Updated Photo",
+                    "description": "Updated Description"
+                }
+            </code>
+        </pre>
+        <p><strong>Response:</strong></p>
+        <pre>
+            <code>
+                HTTP/1.1 200 OK
+                Content-Type: application/json
+
+                {
+                    "id": 3,
+                    "title": "Updated Photo",
+                    "description": "Updated Description"
+                }
+            </code>
+        </pre>
+    </div>
+
+    <h2>5. Remove a specific photo</h2>
+    <p>Remove data of a specific photo item by ID.</p>
+    <div class="endpoint">
+        <p><strong>Endpoint:</strong> <code>DELETE /photos/:id</code></p>
+        <p><strong>HTTP Method:</strong> DELETE</p>
+        <p><strong>Response:</strong></p>
+        <pre>
+            <code>
+                HTTP/1.1 204 No Content
+            </code>
+        </pre>
+    </div>
+
+</body>
+</html>
