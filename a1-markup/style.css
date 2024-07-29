@@ -1,0 +1,203 @@
+body, figure, h1, h2, h3, p, ul, dl, form {
+    padding: 0;
+    margin-right: 10px; 
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+    background-repeat: repeat-x;
+    text-align: center;
+    text-indent: 10px;
+    background: url(https://www.uvaguides.org/wp-content/uploads/2023/04/pastel-green-color-solid-background-1920x1080-1.png) no-repeat fixed center;
+    orphans: 2; 
+    widows: 2; 
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 1px;
+    font-variant: small-caps;
+    text-align: center;
+    color: #2C610E;
+    text-decoration: underline overline white;
+    font-family: Copperplate, fantasy;
+}
+
+h2 {
+    font-variant: small-caps;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    border-style: solid;
+    border-width: medium;
+    border-color: green;
+    background-color: #779553;
+}
+
+h3 {
+    font: 18px monospace;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: underline;
+}
+
+p {
+    font-style: normal;
+    margin: 2px 30px 40px 60px;
+}
+
+td.description {
+    text-align: justify;
+}
+
+td.name, td.genre, td.date, figcaption.poster {
+    text-align: center;
+}
+
+dl {
+    text-align: left; 
+    border: 4px dotted #7F5310;
+    background-image: url(https://i.ibb.co/8XRXV3K/hello.png);
+}
+
+dt, dd {
+    margin-bottom: 10px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    caption-side: top;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+    float: left;
+    vertical-align: middle; 
+}
+
+td ul {
+    list-style-position: inside;
+    margin-left: 1em;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-image: url(https://i.ibb.co/9VTVVy7/New-Project.png); 
+}
+
+ul {
+    list-style: square;
+}
+form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+a:link {
+    color: #7F5310;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #779553;
+}
+
+a:active {
+    color: #ddd;
+}
+
+a:focus {
+    color: #26390E;
+}
+
+@media print {
+    body {
+        font-family: 'Times New Roman', serif;
+        margin: 1px;
+    }
+
+    h1, h2, h3 {
+        color: #000;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 6px;
+        text-align: left;
+    }
+
+    img {
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    form {
+        display: none;
+    }
+
+    footer {
+        page-break-after: always;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    table {
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+}
+
+th, td {
+    border-color: #999;
+    border-style: solid;
+}
+
+table {
+    border-spacing: 5px;
+}
