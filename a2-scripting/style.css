@@ -1,0 +1,447 @@
+body, figure, h1, h2, h3, p, ul, dl, form {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+    background-repeat: repeat-x;
+    text-align: center;
+    text-indent: 10px;
+    background: url(https://www.uvaguides.org/wp-content/uploads/2023/04/pastel-green-color-solid-background-1920x1080-1.png);
+    orphans: 2;
+    widows: 2;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 1px;
+    font-variant: small-caps;
+    text-align: center;
+    color: #ddd;
+    text-decoration: underline overline white;
+    font-family: Copperplate, fantasy;
+    background: url(https://your-green.co.uk/cdn/shop/articles/Vibrant_wildflowers.jpg?v=1649079877);
+}
+
+h2 {
+    font-variant: small-caps;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    border-style: solid;
+    border-width: medium;
+    border-color: green;
+    background-color: #bfd19f;
+}
+
+h3 {
+    font: 18px monospace;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: underline;
+}
+
+p {
+    font-style: normal;
+    margin: 2px 30px 40px 60px;
+}
+
+td.description {
+    text-align: justify;
+}
+
+td.name,
+td.genre,
+td.date,
+figcaption.poster {
+    text-align: center;
+}
+
+dl {
+    text-align: left;
+    border: 4px dotted #7F5310;
+    background-color: #c6d4b0;
+    margin-bottom: 10px;
+}
+
+dt,
+dd {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    caption-side: top;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+    float: left;
+    vertical-align: middle;
+}
+
+td ul {
+    list-style-position: inside;
+    margin-left: 1em;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-image: url(https://i.ibb.co/9VTVVy7/New-Project.png);
+}
+
+form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+a:link {
+    color: #7F5310;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #779553;
+}
+
+a:active {
+    color: #ddd;
+}
+
+
+@media print {
+    body {
+        font-family: 'Times New Roman', serif;
+        margin: 1px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #000;
+    }
+
+    h1 {
+        page-break-before: always;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        page-break-inside: avoid;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 6px;
+        text-align: left;
+    }
+
+    img {
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    form {
+        display: none;
+    }
+
+    footer {
+        page-break-after: always;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+        display: block;
+    }
+
+    table {
+        margin-bottom: 10px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+
+    h1,
+    h2,
+    title {
+        font-size: large;
+    }
+
+    nav {
+        font-size: medium;
+    }
+
+    body {
+        font-size: small;
+    }
+
+}
+
+th,
+td {
+    border-color: #999;
+    border-style: solid;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* the modal (background) */
+.modal {
+    display: none;
+    /* hidden by default */
+    position: fixed;
+    /* stay in place */
+    z-index: 1;
+    /* sit on top */
+    padding-top: 100px;
+    /* location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* full width */
+    height: 100%;
+    /* full height */
+    overflow: auto;
+    /* if needed enable scroll */
+    background-color: rgb(0, 0, 0);
+    /* fallback colour */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* black with opacity */
+}
+
+/* modal content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* add animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* the close button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.myrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.server-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/*.gallery*/
+.gallery {
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #bfd19f;
+    padding: 100px 0;
+}
+
+.gallery .gallery-filter {
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery .gallery-filter .filter-item {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+.gallery-item-inner {
+    color: white;
+}
+
+.gallery .gallery-filter .filter-item.active {
+    color: #2a773e;
+    border-color: #2a773e;
+}
+
+.gallery .gallery-item {
+    width: calc(100% / 3);
+    padding: 15px;
+}
+
+.gallery .gallery-item-inner img {
+    width: 100%;
+}
+
+.gallery .gallery-item.show {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery .gallery-item.hide {
+    display: none;
+}
+
+/*responsive*/
+@media(max-width: 991px) {
+    .gallery .gallery-item {
+        width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    .gallery .gallery-item {
+        width: 100%;
+    }
+
+    .gallery .gallery-filter .filter-item {
+        margin-bottom: 10px;
+    }
+}
+
+  /* resources/taken from: https://www.w3schools.com/howto/howto_css_modals.asp */
